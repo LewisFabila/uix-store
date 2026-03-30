@@ -7,19 +7,6 @@
     --fuente: "Sora", sans-serif;
 }
 
-.sora-regular {
-  font-family: "Sora", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-.sora-bold {
-  font-family: "Sora", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-}
-
 /* GLOBAL */
 /* HTML y BODY with modifier to easily use the "rem" measure. */
 html{
@@ -60,6 +47,7 @@ h1, h2, h3{
     text-align: center;
     color: var(--amarillo);
     font-family: var(--fuente);
+    text-transform: uppercase;
 }
 
 h1{
@@ -84,13 +72,25 @@ h3{
     margin: 3rem 0;
 }
 
+/* FOOTER */
+.footer{
+    background-color: var(--negro);
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+.footer__texto{
+    text-align: center;
+    font-family: var(--fuente);
+    font-size: 1.8rem;
+}
+
 /* NAV */
 .navegacion{
     background-color: var(--negro);
     padding: 1rem 0;
     display: flex;
     justify-content: center;
-    gap: 20rem;
 }
 
 .navegacion__enlace{
@@ -99,6 +99,11 @@ h3{
     color: var(--blanco);
     text-transform: uppercase;
     transition: .3s;
+    margin-right: 6rem;
+}
+
+.navegacion__enlace:last-of-type{
+    margin-right: 0;
 }
 
 .navegacion__enlace--activo,
