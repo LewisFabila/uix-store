@@ -1,0 +1,108 @@
+:root{
+    --negro: #1b1f3a;
+    --morado: #392f5a;
+    --gris: #a8a3c1;
+    --blanco: #e4e1f0;
+    --amarillo: #fb8b24;
+    --fuente: "Sora", sans-serif;
+}
+
+.sora-regular {
+  font-family: "Sora", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.sora-bold {
+  font-family: "Sora", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* GLOBAL */
+/* HTML y BODY with modifier to easily use the "rem" measure. */
+html{
+    font-size: 62.5%;
+    box-sizing: border-box; /* Apply a natural box layout model to all elements, but allowing components to change. */
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body{
+    background-color: var(--morado);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+p{
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--blanco);
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+h1, h2, h3{
+    text-align: center;
+    color: var(--amarillo);
+    font-family: var(--fuente);
+}
+
+h1{
+    font-size: 4rem;
+}
+
+h2{
+    font-size: 3.2rem;
+}
+
+h3{
+    font-size: 2.4rem;
+}
+
+/* HEADER */
+.header{
+    display: flex;
+    justify-content: center;
+}
+
+.header__logo{
+    margin: 3rem 0;
+}
+
+/* NAV */
+.navegacion{
+    background-color: var(--negro);
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 20rem;
+}
+
+.navegacion__enlace{
+    font-family: var(--fuente);
+    font-size: 3rem;
+    color: var(--blanco);
+    text-transform: uppercase;
+    transition: .3s;
+}
+
+.navegacion__enlace--activo,
+.navegacion__enlace:hover{
+    color: var(--amarillo);
+    transition: .3s;
+}
