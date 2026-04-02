@@ -12,6 +12,7 @@
 html{
     font-size: 62.5%;
     box-sizing: border-box; /* Apply a natural box layout model to all elements, but allowing components to change. */
+    scroll-behavior: smooth;
 }
 
 *, *:before, *:after {
@@ -112,23 +113,102 @@ h3{
     transition: .3s;
 }
 
+/* GRID */
+.grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    gap: 2rem;
+    padding: 4rem;
+}
+
+@media (min-width: 481px) {
+    .grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1280px) {
+    .grid{
+        grid-template-columns: repeat(3, 1fr);
+        padding: 0;
+    }
+}
+
 /* PRODUCTOS */
 .producto{
+    background-color: var(--negro);
+    padding: 2rem;
+    transition: .3s;
+}
 
+.producto:hover{
+    transform: scale(1.04);
+    transition: .3s;
 }
 
 .producto__imagen{
-
-}
-
-.producto__informacion{
-
+    width: 100%;
 }
 
 .producto__nombre{
-    
+    font-size: 4rem;
+    text-transform: uppercase;
 }
 
 .producto__precio{
+    font-size: 2.8rem;
+    color: var(--amarillo);
+}
 
+.producto__nombre,
+.producto__precio{
+    font-family: var(--fuente);
+    margin: 1rem 0;
+    text-align: center;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+/* GRAFICOS */
+.grafico{
+    min-height: 30rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column: 1 / 1;
+    transition: .4s;
+}
+
+.grafico:hover{
+    transform: scale(1.01);
+    transition: .4s;
+}
+
+.grafico--camisas{
+    background-image: url(../img/grafico1.jpg);
+    grid-row: 2 / 3;
+}
+
+.grafico--node{
+    background-image: url(../img/grafico2.jpg);
+    grid-row: 15 / 16;
+}
+
+@media (min-width: 481px) {
+    .grafico{
+        grid-column: 1 / 3;
+    }
+    .grafico--camisas{
+        grid-row: 2 / 3;
+    }
+    .grafico--node{
+        grid-row: 8 / 9;
+    }
+}
+
+@media (min-width: 1280px) {
+    .grafico--node{
+        grid-row: 5 / 6;
+        grid-column: 2 / 4;
+    }
 }
