@@ -4,6 +4,7 @@
     --gris: #a8a3c1;
     --blanco: #e4e1f0;
     --amarillo: #fb8b24;
+    --amarilloOscuro: #c56d1b;
     --fuente: "Sora", sans-serif;
 }
 
@@ -36,7 +37,7 @@ a{
 }
 
 img{
-    max-width: 100%;
+    width: 100%;
 }
 
 .contenedor{
@@ -71,6 +72,7 @@ h3{
 
 .header__logo{
     margin: 3rem 0;
+    width:258px;
 }
 
 /* FOOTER */
@@ -147,10 +149,6 @@ h3{
     transition: .3s;
 }
 
-.producto__imagen{
-    width: 100%;
-}
-
 .producto__nombre{
     font-size: 4rem;
     text-transform: uppercase;
@@ -180,7 +178,8 @@ h3{
     border-radius: 2rem;
 }
 
-.grafico:hover{
+.grafico:hover,
+.nosotros__imagen:hover{
     transform: scale(1.01);
     transition: .4s;
 }
@@ -233,8 +232,8 @@ h3{
 
 .nosotros__imagen{
     grid-row: 1 / 2;
-    width: 100%;
     padding: 0 4rem 2rem 4rem;
+    transition: .4s;
 }
 
 @media (min-width: 1200px) {
@@ -281,5 +280,89 @@ h3{
 }
 
 .bloque__imagen{
-    width: 100%;
+    transition: .4s;
+}
+
+.bloque__imagen:hover{
+    transform: scale(1.05);
+}
+
+/* PRODUCTO */
+
+.camisa__imagen{
+    padding: 0 4rem;
+    transition: .4s;
+}
+
+.camisa__imagen:hover{
+    transform: scale(1.06);
+    transition: .4s;
+}
+
+.camisa__contenido{
+    margin: 2rem;
+}
+
+.formulario{
+    display: grid;
+    gap: 2rem;
+}
+
+.formulario__campo{
+    border: 1rem solid var(--negro);
+    background-color: transparent;
+    color: var(--blanco);
+    font-family: var(--fuente);
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.formulario__submit{
+    background-color: var(--amarilloOscuro);
+    border: none;
+    font-size: 2rem;
+    font-family: var(--fuente);
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 2rem;
+    border-radius: 4rem;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.formulario__submit:hover{
+    background-color: var(--amarillo);
+    transform: scale(1.04);
+    transition: .25s;
+}
+
+@media (min-width: 481px) {
+    .camisa__imagen{
+        padding: 0 8rem;
+    }
+    .camisa__contenido{
+        margin: 4rem;
+    }
+    .formulario{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .formulario__submit{
+        grid-column: 1 / 3;
+    }
+}
+
+@media (min-width: 1200px) {
+    .camisa{
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 4rem;
+        margin-bottom: 4rem;
+    }
+    .camisa__imagen{
+        padding: 0;
+    }
+    .camisa__contenido{
+        margin: 0;
+    }
 }

@@ -15,7 +15,7 @@
 <body>
     <header class="header">
         <a href="nosotros.html">
-            <img class="header__logo" src="img/logo.png" alt="logo" width="258px">
+            <img class="header__logo" src="img/logo.png" alt="logo">
         </a>
     </header>
 
@@ -25,7 +25,24 @@
     </nav>
 
     <main class="contenedor">
-        <h1>Producto</h1>
+        <h1>React JS</h1>
+
+        <div class="camisa">
+            <img class="camisa__imagen" src="img/3.jpg" alt="imagen del producto">
+            <div class="camisa__contenido">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sint temporibus culpa reiciendis, ullam necessitatibus architecto fugit rem, harum consequuntur adipisci facilis libero sit laudantium obcaecati, aspernatur molestias! Deserunt, sed!</p>
+                <form class="formulario">
+                    <select required class="formulario__campo">
+                        <option disabled selected>-- Selecciona una talla --</option>
+                        <option value="chica">S</option>
+                        <option value="mediana">M</option>
+                        <option value="grande">L</option>
+                    </select>
+                    <input class="formulario__campo" type="number" placeholder="Cantidad" min="1">
+                    <input class="formulario__submit" type="submit" value="Agregar al carrito">
+                </form>
+            </div>
+        </div>
     </main>
 
     <footer class="footer">
